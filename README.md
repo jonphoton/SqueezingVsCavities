@@ -22,13 +22,13 @@ where $A \sim w^2$ is the mode area.
 
 The detection error for distinguishing atom-present from atom-absent scales as:
 
-$$P_\mathrm{err} \sim \exp\!\left(-\frac{\phi^2}{\epsilon}\, N_\mathrm{sc}\right)$$
+$$P_\mathrm{err} \sim \exp\left(-\frac{\phi^2}{\epsilon} N_\mathrm{sc}\right)$$
 
 where $N_\mathrm{sc}$ is the total number of photons scattered by the atom.
 
 **Why this form?**  For $N$ probe photons in a coherent state, the signal-to-noise ratio is $\mathrm{SNR}^2 = N\phi^2$.  The total scattering is $N_\mathrm{sc} = N\epsilon$.  Eliminating $N$:
 
-$$\mathrm{SNR}^2 = \frac{\phi^2}{\epsilon}\,N_\mathrm{sc}$$
+$$\mathrm{SNR}^2 = \frac{\phi^2}{\epsilon} N_\mathrm{sc}$$
 
 The ratio $\phi^2/\epsilon$ is the **information gained per scattered photon** -- the fundamental figure of merit.  Computing it:
 
@@ -44,8 +44,8 @@ In an optical cavity with mirror transmission $T$:
 - Accumulated phase: $\Phi = \phi/T$ per input photon
 - Accumulated scattering: $E = \epsilon/T$ per input photon
 - $\mathrm{SNR}^2 = N(\phi/T)^2 = N\phi^2/T^2$
-- $N_\mathrm{sc} = N\epsilon/T$, so $N = N_\mathrm{sc}\,T/\epsilon$
-- $\mathrm{SNR}^2 = N_\mathrm{sc}\,\dfrac{\phi^2}{\epsilon}\,\dfrac{1}{T}$
+- $N_\mathrm{sc} = N\epsilon/T$, so $N = N_\mathrm{sc} T/\epsilon$
+- $\mathrm{SNR}^2 = N_\mathrm{sc} \frac{\phi^2}{\epsilon} \frac{1}{T}$
 
 The cavity provides an enhancement factor $L_\mathrm{cav} = 1/T$.  But intracavity loss bounds how small $T$ can usefully be -- once loss per round trip exceeds $T$, photons are absorbed instead of recycled.  So:
 
@@ -59,21 +59,21 @@ $$\Delta\phi \sim \frac{e^{-r}}{\sqrt{N}}$$
 
 This gives $\mathrm{SNR}^2 = N\phi^2 e^{2r}$, so:
 
-$$\mathrm{SNR}^2 = N_\mathrm{sc}\,\frac{\phi^2}{\epsilon}\,e^{2r}$$
+$$\mathrm{SNR}^2 = N_\mathrm{sc} \frac{\phi^2}{\epsilon} e^{2r}$$
 
 The squeezing enhancement is $L_\mathrm{sq} = e^{2r}$.  But optical loss destroys squeezing.  With transmission $\eta = 1 - \ell$, the squeezed quadrature variance becomes:
 
-$$V_\mathrm{sq} = \eta\, e^{-2r} + (1-\eta)$$
+$$V_\mathrm{sq} = \eta e^{-2r} + (1-\eta)$$
 
 For large $r$, this floors at $(1 - \eta) = \ell$.  The effective enhancement saturates:
 
-$$L_\mathrm{sq} = \frac{1}{V_\mathrm{sq}} \;\xrightarrow{r\to\infty}\; \frac{1}{\ell}$$
+$$L_\mathrm{sq} = \frac{1}{V_\mathrm{sq}} \xrightarrow{r\to\infty} \frac{1}{\ell}$$
 
 ## The Equivalence
 
 Both strategies produce the same detection error:
 
-$$P_\mathrm{err} \sim \exp\!\left(-\frac{\lambda^2}{w^2}\,\frac{1}{\mathcal{L}}\,N_\mathrm{sc}\right)$$
+$$P_\mathrm{err} \sim \exp\left(-\frac{\lambda^2}{w^2} \frac{1}{\mathcal{L}} N_\mathrm{sc}\right)$$
 
 where $\mathcal{L}$ is the single-pass loss through the interaction region, which:
 
@@ -137,7 +137,7 @@ Key references:
 
 ## Summary
 
-$$\boxed{P_\mathrm{err} \sim \exp\!\left(-\frac{\lambda^2}{w^2} \cdot \frac{1}{\mathcal{L}} \cdot N_\mathrm{sc}\right)}$$
+$$\boxed{P_\mathrm{err} \sim \exp\left(-\frac{\lambda^2}{w^2} \cdot \frac{1}{\mathcal{L}} \cdot N_\mathrm{sc}\right)}$$
 
 The number of scattered photons required for a given detection error is set by two factors:
 
